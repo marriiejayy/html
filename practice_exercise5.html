@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    
+<div style="background-color: gray; padding: 30px; border-radius: 10px; max-width: 500px;">
+    <h3 style="color: midnightblue;">Registration Form</h3>
+
+  <form>
+        <div style="margin-bottom: 15px;">
+            <label for="firstname" style="display: block; margin-bottom: 5px; font-weight: bold; color: black;">First Name:</label>
+            <input type="text" id="firstname" name="firstname" 
+                   style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 5px;" 
+                   placeholder="Enter your first name">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="lastname" style="display: block; margin-bottom: 5px; font-weight: bold; color: black;">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" 
+                   style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 5px;" 
+                   placeholder="Enter your last name">
+        </div>
+    
+        <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold; color: black;">Email:</label>
+            <input type="email" id="email" name="email" 
+                   style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 5px;" 
+                   placeholder="your.email@example.com">
+
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="password-input" style="display: block; margin-bottom: 4px;"><strong>Password:</strong></label>
+            <input type="password" id="password-input" placeholder="Enter password" 
+                   style="width: 90%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+
+             <tr>
+                <td><label for="age-input"><strong>Age:</strong></label></td>
+                <td><input type="number" id="age-input" min="18" max="65" placeholder="18-65" 
+                           style="padding: 8px; border: 2px solid #ddd; border-radius: 5px; width: 92%; margin-bottom: 20;"></td>
+           
+
+
+         <fieldset style="border: 4pt solid rgb(25, 43, 92); border-radius: 12px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   padding: 10px; margin-bottom: 20px;">
+            <legend style="font-weight: bold; color:rgb(178, 104, 34);">Interest (Check all sport interest that apply):</legend>
+            
+            <div>
+                <p><label><input type="checkbox" name="interest" value="swimming"> Swimming</label></p>
+                <p><label><input type="checkbox" name="interest" value="table tennis">Table tennis</label></p>
+                <p><label><input type="checkbox" name="interest" value="basket ball"> Basket ball</label></p>
+                <p><label><input type="checkbox" name="interest" value="volley ball"> Volley ball</label></p>
+                <p><label><input type="checkbox" name="interest" value="hockey"> Hockey</label></p>
+                <p><label><input type="checkbox" name="interest" value="cricket"> Cricket</label></p>
+            </div>
+        </fieldset>
+        
+
+           <div style="margin-bottom: 15px;">
+            <label for="country" style="display: block; margin-bottom: 5px; font-weight: bold;">Country:</label>
+            <select id="country" name="country" style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;">
+                <option value="">Select your country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="ng">Nigeria</option>
+                <option value="gh">Ghana</option>
+                <option value="qa">Qatar</option>
+                <option value="br">Brazil</option>
+                <option value="ir">Iran</option>
+                <option value="ru">Russia</option>
+                <option value="rw">Rwanda</option>
+                <option value="zi">Zimbabwe</option>
+                <option value="na">Nairobi</option>
+                <option value="sa">South Africa</option>
+                
+            </select>
+            </tr>
+        </div>
+
+</body>
+
+</html>
