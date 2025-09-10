@@ -7,8 +7,8 @@
 </head>
 <body>
     
-<div style="background-color: gray; padding: 30px; border-radius: 10px; max-width: 500px;">
-    <h3 style="color: midnightblue;">Registration Form</h3>
+<div style="background-color: gray; padding: 60px; border-radius: 10px; max-width: 500px;">
+    <h2 style="color: midnightblue;">REGISTRATION FORM</h3>
 
   <form>
         <div style="margin-bottom: 15px;">
@@ -30,7 +30,6 @@
             <input type="email" id="email" name="email" 
                    style="width: 90%; padding: 8px; border: 2px solid #ddd; border-radius: 5px;" 
                    placeholder="your.email@example.com">
-
         </div>
 
         <div style="margin-bottom: 15px;">
@@ -42,12 +41,20 @@
              <tr>
                 <td><label for="age-input"><strong>Age:</strong></label></td>
                 <td><input type="number" id="age-input" min="18" max="65" placeholder="18-65" 
-                           style="padding: 8px; border: 2px solid #ddd; border-radius: 5px; width: 92%; margin-bottom: 20;"></td>
+                           style="padding: 8px; border: 2px solid #ddd; border-radius: 5px; width: 92%; margin-bottom: 30px;"></td>
            
-
+     <fieldset style="border: 4pt solid  rgb(25, 43, 92); border-radius: 8px; padding: 15px; margin-bottom: 30px;">
+             <legend style="font-weight: bold; color: rgb(25, 43, 92);">Gender (Select one):</legend>
+            
+                <div>
+                    <p><label><input type="radio" name="male" value="male"> Male</label></p>
+                    <p><label><input type="radio" name="female" value="female"> Female</label></p>
+                    <p><label><input type="radio" name="binar" value="binary"> Binary</label></p>
+                </div>
+    </fieldset>
 
          <fieldset style="border: 4pt solid rgb(25, 43, 92); border-radius: 12px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   padding: 10px; margin-bottom: 20px;">
-            <legend style="font-weight: bold; color:rgb(178, 104, 34);">Interest (Check all sport interest that apply):</legend>
+            <legend style="font-weight: bold; color:rgb(25, 43, 92);">Interest (Check all sport interest that apply):</legend>
             
             <div>
                 <p><label><input type="checkbox" name="interest" value="swimming"> Swimming</label></p>
@@ -81,6 +88,13 @@
             </select>
             </tr>
         </div>
+
+        <button type="submit" style="background-color: navy; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Submit Registration Form
+        </button>
+
+    </form>
+</div>
 
 </body>
 
