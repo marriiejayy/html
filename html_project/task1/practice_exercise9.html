@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 10px; padding: 0; line-height: 1.6;">
+
+  <header style="background-color: #2c3e50; color: white; padding: 20px; text-align: center;">
+    <h1 style="margin: 10px;"><strong>My Portfolio</strong></h1>
+    <p style="margin: 10px;"><strong>Showcasing my coding journey</strong></p>
+  </header>
+
+
+  <nav style="background-color: #34495e; padding: 10px; text-align: center;">
+    <a href="#about" style="color: white; margin:  100px;">ABOUT</a>
+    <a href="#projects" style="color: white; margin: 100px;">PROJECT</a>
+    <a href="#contact" style="color: white; margin: 100px; ">CONTACT</a>
+  </nav>
+
+  <main style="padding: 20px;">
+    
+    <article id="about" style="margin-bottom: 40px;">
+      <header>
+        <h2>About Me</h2>
+      </header>
+      <p>
+        Hello, I am Mariam, a passionate web developer and creative thinker. I love coding, building websites, 
+      .
+      </p>
+      <figure>
+        <img src="profile.jpg" alt="Portrait of Mariam " style="max-width: 200px; border-radius: 50%;">
+        <figcaption>Meet Mariam, the mind behind this portfolio.</figcaption>
+      </figure>
+    </article>
+
+  
+    <section id="projects" style="margin-bottom: 40px;">
+      <h2>My Projects</h2>
+      <article>
+        <h3>MARIAMS CLOSET BLOG</h3>
+        <p> This is a  blog showcasing traditional fabrics like Aso Oke with semantic HTML and accessibility in mind.</p>
+        <img src="project1.jpg" alt="Screenshot of fashion blog website" style="max-width: 100%; border: 2px solid #ccc;">
+      </article>
+
+      <article>
+        <h3>Student Performance System</h3>
+        <p>A Python-powered grading and feedback app designed to improve classroom efficiency.</p>
+        <img src="project2.jpg" alt="Dashboard of student performance app" style="max-width: 100%; border: 2px solid #ccc;">
+      </article>
+    </section>
+
+
+    <aside style="background-color: #ecf0f1; padding: 15px; border-left: 4px solid #2980b9; margin-bottom: 40px;">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#about">Go to About</a></li>
+        <li><a href="#projects">Go to Projects</a></li>
+        <li><a href="#contact">Go to Contact</a></li>
+      </ul>
+    </aside>
+
+
+    <section id="contact" style="margin-bottom: 40px;">
+      <h2>Contact Me</h2>
+      <form style="max-width: 400px;" novalidate>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required minlength="2" style="width: 100%; padding: 8px; margin: 5px 0;"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin: 5px 0;"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required minlength="10" style="width: 100%; padding: 8px; margin: 5px 0;"></textarea><br><br>
+
+        <button type="submit" style="background-color: #2980b9; color: white; border: none; padding: 10px 15px; cursor: pointer;">Send</button>
+      </form>
+    </section>
+  </main>
+
+
+  <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 15px;">
+    <p>&copy; 2025 Mariam's Portfolio | Built with ❤️ using HTML5</p>
+  </footer>
+
+</body>
+</html>
