@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Market Flow Diagrams</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #f9fafb, #eef2ff);
+      padding: 40px;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      color: #05264a;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .flows {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .flow {
+      flex: 1;
+      min-width: 380px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .flow:hover {
+      transform: translateY(-5px);
+    }
+
+    .flow h3 {
+      text-align: center;
+      color: #0a2540;
+      margin-bottom: 20px;
+      font-size: 20px;
+      border-bottom: 2px solid #eef2ff;
+      padding-bottom: 10px;
+    }
+
+    .lane {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .node {
+      min-width: 120px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .node:hover {
+      transform: scale(1.05);
+    }
+
+    /* Custom colors for each role */
+    .farmer { background: linear-gradient(135deg, #16a34a, #22c55e); }
+    .middleman { background: linear-gradient(135deg, #f97316, #fb923c); }
+    .distributor { background: linear-gradient(135deg, #eab308, #facc15); color:#333; }
+    .wholesaler { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+    .buyer { background: linear-gradient(135deg, #9333ea, #a855f7); }
+    .ussd { background: linear-gradient(135deg, #0ea5e9, #38bdf8); }
+
+    .arrow {
+      flex-shrink: 0;
+      padding: 8px 14px;
+      border-radius: 50px;
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Problem Statement: Market Flow Comparison</h2>
+
+  <div class="flows">
+
+    <!-- Traditional Market Flow -->
+    <div class="flow">
+      <h3>Traditional Market Flow</h3>
+      <div class="lane">
+        <div class="node farmer">Farmer</div>
+        <div class="arrow">→</div>
+        <div class="node middleman">Village Middleman</div>
+        <div class="arrow">→</div>
+        <div class="node distributor">Distributor</div>
+        <div class="arrow">→</div>
+        <div class="node wholesaler">Wholesaler</div>
+        <div class="arrow">→</div>
+        <div class="node buyer">Buyer</div>
+      </div>
+    </div>
+
+    <!-- Proposed USSD Market Flow -->
+    <div class="flow">
+      <h3>Proposed USSD Market Flow</h3>
+      <div class="lane">
+        <div class="node farmer">Farmer</div>
+        <div class="arrow">→</div>
+        <div class="node ussd">USSD Platform<br><small>(Prices, Listings, Connection)</small></div>
+        <div class="arrow">→</div>
+        <div class="node buyer">Buyer</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

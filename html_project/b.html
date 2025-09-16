@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroUSSD Market Flow</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fafb;
+      padding: 40px;
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #1a237e;
+    }
+
+    .flow-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .flow-box {
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .traditional {
+      background: #e8f0fe;
+      border-left: 6px solid #1a73e8;
+    }
+
+    .ussd {
+      background: #fff7e6;
+      border-left: 6px solid #f9a825;
+    }
+
+    .nodes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .node {
+      padding: 12px 24px;
+      background: #fff;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .arrow {
+      font-size: 22px;
+      color: #666;
+    }
+
+    .caption {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+    }
+
+    .legend {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #666;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>AgroUSSD — Bridging the Gap</h1>
+
+  <div class="flow-container">
+
+    <!-- Traditional Flow -->
+    <div class="flow-box traditional">
+      <h2>Traditional Market Flow</h2>
+      <div class="nodes">
+        <div class="node">Farmer</div>
+        <div class="arrow">↓</div>
+        <div class="node">Middleman</div>
+        <div class="arrow">↓</div>
+        <div class="node">Buyer</div>
+      </div>
+      <p class="caption">Low price to farmer — High cost to buyer</p>
+      <p class="legend">🔵 Traditional flow: multiple intermediaries increase costs</p>
+    </div>
+
+    <!-- USSD Flow -->
+    <div class="flow-box ussd">
+      <h2>Proposed USSD Market Flow</h2>
+      <div class="nodes">
+        <div class="node">Farmer</div>
+        <div class="arrow">↓</div>
+        <div class="node">USSD Platform</div>
+        <div class="arrow">↓</div>
+        <div class="node">Buyer</div>
+      </div>
+      <p class="caption">Direct access • Price transparency • Fairer returns</p>
+      <p class="legend">🟡 Proposed flow: USSD connects farmers & buyers directly</p>
+    </div>
+
+  </div>
+</body>
+</html>
+

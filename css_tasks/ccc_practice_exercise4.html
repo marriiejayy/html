@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+        .box-demo {
+            margin-bottom: 30px;
+        }
+
+        .visual-box-model {
+            background-color: #fff3cd;
+            border: 3px solid #ffc107;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: gray;
+        }
+
+        .content-demo {
+            background-color: #3498db;
+            color: white;
+            padding: 0;
+            margin: 0;
+            border: none;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .padding-demo {
+            background-color: #e74c3c;
+        }
+        
+    </style>
+</head>
+<body>
+    <h3>CSS Box Model in action</h3>
+
+    <div class="box-demo">
+        <h4>Visual Box Model</h4>
+        <div class="visual-box-model">
+            This box shows MARGIN (yellow), BORDER (orange line), PADDING (space inside), and CONTENT (this text)
+        </div>
+
+    </div>
+        <div class="box-demo">
+            <h4>Individual Components</h4>
+        
+
+        <div class="content-demo">
+            CONTENT: This box has no padding, margin, or border - just content
+        </div>
+
+        <div class="padding-demo">
+            PADDING: This box has 25px padding. (space inside the element)
+        </div>
+
+        <div class="margin-demo">
+            MARGIN: This box has 30px top/bottom margin (space outside)
+        </div>
+
+        <div class="border-demo">
+            BORDER: This box has a 5px solid border around it
+        </div>
+
+        <div class="combined-demo">
+            COMBINED: This box has margin, border, padding, and content all together
+        </div>
+    </div>
+
+    </body>
+</html>

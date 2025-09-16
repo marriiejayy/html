@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Problem Statement — AgroUSSD</title>
+<style>
+  :root{
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --muted:#6b7280;
+    --accent:#0b74de;
+    --accent-2:#f59e0b;
+    --box:#e6f0ff;
+    --box2:#fff7e6;
+    --radius:12px;
+    --pad:20px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #0f172a;
+  }
+
+  html,body{height:100%; margin:0; background:var(--bg); -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1100px; margin:34px auto; padding:24px;}
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:0 8px 30px rgba(15,23,42,0.06);
+    padding:24px;
+  }
+
+  .header{
+    display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px;
+  }
+  .title{font-size:20px; font-weight:700; color:#05264a;}
+  .subtitle{font-size:13px; color:var(--muted);}
+
+  .content{
+    display:flex;
+    gap:28px;
+    align-items:flex-start;
+  }
+
+  /* Left column (bullets) */
+  .left{
+    flex:1.1;
+    min-width:260px;
+  }
+  .problem-list{
+    background:linear-gradient(180deg, rgba(11,116,222,0.03), transparent 60%);
+    border-radius:10px; padding:18px; list-style:none; margin:0;
+  }
+  .problem-list li{
+    margin-bottom:14px; padding-left:10px;
+  }
+  .problem-list li:last-child{margin-bottom:0}
+  .problem-title{font-weight:700; font-size:15px; color:#05264a; margin-bottom:6px;}
+  .problem-desc{color:var(--muted); font-size:14px; line-height:1.45;}
+
+  /* Right column (diagram) */
+  .right{
+    flex:1;
+    min-width:300px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .diagram-card{
+    background:linear-gradient(90deg, rgba(0,0,0,0.02), transparent);
+    border-radius:10px; padding:14px; display:flex; flex-direction:column; gap:12px; align-items:stretch;
+  }
+  .diagram-title{font-weight:700; font-size:14px; color:#05264a;}
+  .flows{display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
+
+  .flow{
+    flex:1;
+    min-width:140px;
+    background:var(--box);
+    border-radius:8px; padding:12px; text-align:center;
+    display:flex; flex-direction:column; gap:10px; align-items:center;
+  }
+  .flow.proposed{background:var(--box2);}
+
+  .node{
+    display:inline-block;
+    background:white;
+    padding:10px 14px;
+    border-radius:8px;
+    box-shadow:0 6px 16px rgba(2,6,23,0.06);
+    font-weight:600;
+    color:#05264a;
+    min-width:100px;
+  }
+
+  .arrow{
+    font-size:20px;
+    color:var(--muted);
+    font-weight:700;
+  }
+
+  .label{
+    font-size:13px; color:var(--muted);
+    margin-top:4px;
+  }
+
+  .legend{
+    font-size:13px; color:var(--muted); display:flex; gap:8px; align-items:center; margin-top:6px;
+  }
+  .chip{width:10px; height:10px; border-radius:3px; display:inline-block}
+
+  /* Responsive */
+  @media (max-width:880px){
+    .content{flex-direction:column}
+    .flows{flex-direction:column}
+    .right{order:2}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <div>
+          <div class="title">Problem Statement</div>
+          <div class="subtitle">Why smallholder farmers and buyers struggle in current market flows</div>
+        </div>
+        <div class="subtitle">AgroUSSD — bridging the gap</div>
+      </div>
+
+      <div class="content">
+        <!-- LEFT: bullets -->
+        <div class="left" aria-labelledby="probs">
+          <ul class="problem-list" id="probs">
+            <li>
+              <div class="problem-title">Limited internet access</div>
+              <div class="problem-desc">Many rural farmers only have basic phones and lack reliable internet, preventing use of smartphone apps or online marketplaces.</div>
+            </li>
+            <li>
+              <div class="problem-title">Middlemen reduce farmer profit</div>
+              <div class="problem-desc">Farmers often sell to intermediaries who capture the largest share of the final price, leaving farmers with a small margin.</div>
+            </li>
+            <li>
+              <div class="problem-title">Buyers struggle to source directly</div>
+              <div class="problem-desc">Restaurants and retailers face difficulty locating and contacting producers, leading to higher costs and lower-quality produce.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RIGHT: diagram -->
+        <div class="right" role="img" aria-label="Diagram showing traditional market flow and proposed USSD flow">
+          <div class="diagram-card">
+            <div class="diagram-title">Traditional Market Flow</div>
+            <div class="flows">
+              <div class="flow" aria-hidden="false">
+                <div class="node" title="Farmer">Farmer</div>
+                <div class="arrow">→</div>
+                <div class="node" title="Middleman">Middleman</div>
+                <div class="arrow">→</div>
+                <div class="node" title="Buyer">Buyer</div>
+                <div class="label">Low price to farmer — High cost to buyer</div>
+              </div>
+            </div>
+            <div class="legend">
+              <span class="chip" style="background:var(--box)"></span>
+              <span style="color:var(--muted)">Traditional flow: multiple intermediaries increase costs</span>
+            </div>
+          </div>
+
+          <div class="diagram-card">
+            <div class="diagram-title">Proposed USSD Market Flow</div>
+            <div class="flows">
+              <div class="flow proposed" aria-hidden="false">
+                <div class="node" title="Farmer">Farmer</div>
+                <div class="arrow">→</div>
+                <div class="node" title="USSD">USSD Platform</div>
+                <div class="arrow">→</div>
+                <div class="node" title="Buyer">Buyer</div>
+                <div class="label">Direct access • Price transparency • Fairer returns</div>
+              </div>
+            </div>
+            <div class="legend">
+              <span class="chip" style="background:var(--box2)"></span>
+              <span style="color:var(--muted)">Proposed flow: USSD connects farmers & buyers directly</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="margin-top:16px; color:var(--muted); font-size:13px;">
+        <strong>Note:</strong> This diagram illustrates the core problem and the intended USSD-based solution — simple, phone-friendly, and designed for inclusion.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
