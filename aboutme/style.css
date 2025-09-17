@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.gen-container {
+    background-color: bisque;
+    color: black;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+
+.body-container {
+    padding: 10px;
+    margin: 10px;
+}
+
+.about-me {
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.my-contact {
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.my-skill {
+     padding: 10px;
+    margin: 10px;
+}
