@@ -9,10 +9,7 @@
         * {
             margin: 0;
             padding: 0;
-        }
-
-        .box {
-            
+            box-sizing: border-box;
         }
 
         .card-container {
@@ -21,20 +18,39 @@
             margin: 15px;  
         }
 
-
         .header-container {
             font-family:'Courier New', Courier, monospace;
             font-size: larger;
             color: white;
             background: linear-gradient(#45628b, #111827);
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 2px;
+            padding: 10px;
         }
 
-        nav {
+        .about-img {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .navigation-demo {
+        background-color: #0a1a2b;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+        .nav-item:hover {
             margin-top: 20px;
             padding-bottom: 20px;
             margin: 5px;
+            background-color: #007bff;
+            color: white;
         }
 
         .body-container {
@@ -43,6 +59,7 @@
             word-spacing: 1.0px;
             line-height: 1.5;
             padding: 10px;
+            margin-top: 2px;
             
         }
 
@@ -77,19 +94,26 @@
             text-align: end;
         }
 
+        
+
 
     </style>
 <body>
-    <div class="card-container" img src="/images/steptodown.com752536.jpg">
-
+    <div class="card-container">
+        
         <div class="header-container">
+            <div class="about-img">
             <h1>ABOUT ME</h1>
-            <img src="/images/IMG-20250914-WA0028.jpg" style="width: 100px; padding-left: 1000px;">
+            <img src="/images/IMG-20250914-WA0026.jpg" >
+            </div>
+        </div>
+
+        <div  class="navigation-demo">
                 <nav>
-                    <a href="#biography" style="color: white;margin: 100px;"><strong>BIOGRAPHY</strong></a>
-                    <a href="#my-journey" style="color: white;  margin: 100px;"><strong>MY JOURNEY</strong></a>
-                    <a href="#my-work" style="color: white;  margin: 100px; "><strong>MY WORK</strong></a>
-                    <a href="#my-vision" style="color: white;  margin: 100px;"><strong>MY VISION</strong></a>
+                    <a href="#biography"  class="nav-item"  style="color: white;margin: 100px;"><strong>BIOGRAPHY</strong></a>
+                    <a href="#my-journey"  class="nav-item"   style="color: white;  margin: 100px;"><strong>MY JOURNEY</strong></a>
+                    <a href="#my-work"  class="nav-item"  style="color: white;  margin: 100px; "><strong>MY WORK</strong></a>
+                    <a href="#my-vision"  class="nav-item"   style="color: white;  margin: 100px;"><strong>MY VISION</strong></a>
                 </nav>  
     
         </div>
@@ -107,11 +131,9 @@
 
             <div class="my-work">
                 <h2 style="color: #60a5fa;"><strong>💻MY WORK</strong></h2>
-                <ul>
-                    <li>I’ve been learning coding (Python, HTML, CSS, SQL, Power BI), while also exploring generative AI.</li>
-                    <li>Alongside tech, I’ve built a strong foundation in fashion design, creating pieces that reflect culture and individuality.</li>
-                    <li>Each step in my journey strengthens both my analytical and creative skills.</li>  
-                </ul>
+                    <p>I’ve been learning coding (Python, HTML, CSS, SQL, Power BI), while also exploring generative AI.</li>
+                    <p>Alongside tech, I’ve built a strong foundation in fashion design, creating pieces that reflect culture and individuality.</li>
+                    <p>Each step in my journey strengthens both my analytical and creative skills.</li> 
             </div>
 
             <div class="my-vision">
