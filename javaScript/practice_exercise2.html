@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+<body>
+    <div class=" Simple Calculator">
+        <button class="variable-button" onclick="variableOne()">First variable</button>
+        <button class="variable-button" onclick="variableTwo()">Second variable</button>
+        <button class="variable-button" onclick="outputForAll()">Answer</button>
+
+        <div id="answer" class="output"></div>
+    </div>
+
+    <script>
+    function variableOne() {
+
+    
+        let num1 = 10;
+        let num2 = 15;
+
+        // Perform arithmetic operations
+        let addition= num1 + num2;
+        let subtraction = num1 - num2;
+        let multiplication = num1 * num2;
+        let division = num1 / num2;
+        let remainder = num1 % num2;
+        let exponentiation = num1 ** num2;
+
+        // Display results using temperate literals
+        let output = `
+         
+        `                                                                                                                        
+       
+        // Extra info in console
+        console.log("🔎 Debug Info:");
+        console.log(`First Number: ${num1}`);
+        console.log(`Second Number: ${num2}`);
+        console.log(`Sum: ${sum}, Difference: ${difference}, Product: ${product}, Quotient: ${quotient}, Remainder: ${remainder}`);
+    }
+    
+    </script>
+</div>
+
+</body>
+</html>
