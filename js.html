@@ -1,0 +1,156 @@
+<!-- <!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .js-demo {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+            color: black;
+        }
+
+        .output {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .demo-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .demo-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-demo">
+        <h3>Your first javascript program</h3>
+        <p>Click on the button to run your first javascript code:</p>
+
+        <button class="demo-button" onclick="runfirstprogram()"> Run Hello world</button>
+        <button class="demo-button" onclick="showAlert()">showAlert</button>
+
+        <div id="first-output" class="output">Output will appear here... </div>
+    </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    function runfirstprogram() {
+        // This is a comment - javascript ignores this line
+        // Lets display a message in our output area;
+        document.getElementById('first-output').innerHTML ='Hello World! This message was created by javascipt';
+
+        // Also show it in the broswer console
+        console.log('hello from javascript console!');  
+    }
+
+    function showAlert() {
+        // show a pop up alert
+        alert('this is a javascript alert!');
+    }
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="js-demo">
+        <h3>Working with Variables</h3>
+        <p>Click each button to see different variable examples:</p>
+
+        <button class="demo-button" onclick="showBasicVariables()">Basic Variables</button>
+        <button class="demo-button" onclick="showVariableTypes()">variable type</button>
+        <button class="demo-button" onclick="demonstrateConstVsLet()">const vs let</button>
+        <button class="demo-button" onclick="variableNamingExamples()">Naming examples</button>
+        
+        <div id="variables-output" class="output">Click a button to see variable examples...</div>
+    </div>
+
+
+<script>
+function showBasicVariables() {
+     // Creating variables with different declarations
+     let studentName = "Alice";
+     const schoolName = "Tech Academy";
+     let age = 25;
+    
+    // Display the variables
+    let output = `
+    <strong>Basic Variables:</strong><br>
+    Student Name: ${studentName}<br>
+    school Name: ${schoolName}<br>
+    Age: ${age}<br><br>
+    <em>studentName and age use 'let' (can be changed)<br>
+    schoolName uses 'const' (cannot be changed)</em>
+    `;
+
+    document.getElementById('variables-output').innerHTML = output;
+    console.log('student:', studentName, 'Age:', age, 'School:', schoolName);  
+}
+
+function showVariableTypes() {
+    // different data type
+    let userName = "John Doe";           // String
+    let userAge = 30;                    // Number
+    let isActive = true;                 // Boolean
+    let salary = 50000.50;              // Number (with decimals)
+    let middleName = null;              // Null (intentionally empty)
+    let nickname;
+
+    let output = `
+        <strong>Variable Types: </strong><br>
+        userName: "${userName}" (type: ${typeof userName})<br>
+        userAge: ${userAge} (type: ${typeof userAge})<br>
+        isActive: ${isActive} (type: ${typeof isActive})<br>
+        salary: ${salary} (type: ${typeof salary})<br>
+        middleName: ${middleName} (type: ${typeof middleName})<br>
+        nickname: ${nickname} (type: ${typeof nickname})
+    `;
+
+    document.getElementById('variables-output').innerHTML = output
+}
+
+function demonstrateConstVsLet() {
+    let changeable = "I can be changed";
+    const permanent = "I cannot be changed";
+    
+    // Change the let variable
+    changeable = "I have been changed!";
+    
+    // Try to change const (this would cause an error)
+    // permanent = "This would cause an error!"; // Don't uncomment this!
+    
+    let output = `
+        <strong>const vs let:</strong><br>
+        changeable (let): "${changeable}"<br>
+        permanent (const): "${permanent}"<br><br>
+        <em>The 'let' variable was successfully changed.<br>
+        Trying to change a 'const' variable would cause an error!</em>
+    `;
+    
+    document.getElementById('variables-output').innerHTML = output;
+}
+
+</script>
+</body>
+</html>  

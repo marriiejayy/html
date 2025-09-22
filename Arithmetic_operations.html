@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="js-demo">
+    <h3>Arithmetic and Assignment Operators</h3>
+    <p>Explore how JavaScript handles mathematical operations and assignments:</p>
+
+    <button class="demo-button" onclick="showArithmeticOperators()">Arithmetic Operators</button>
+    <button class="demo-button" onclick="showAssignmentOperators()">Assignment operators</button>
+
+    <div id="operators-output" class="output">Click a button to explore operators...</div>
+    </div>
+
+    <script>
+        function showArithmeticOperators () {
+            let a=10;
+            let b=3;
+
+            let addition = a+b;
+            let subtraction = a-b;
+            let multiplication = a * b;
+            let division = a/b;
+            let remaider = a % b;
+            let exponentiation = a ** b;
+        
+
+            let output =`
+                <strong>Arithmetic operators:</strong><br><br>
+                a = ${a} , b = ${b}<br><br>
+                Addition (a + b): ${addition}<br>
+                Subtraction (a - b): ${subtraction}<br>
+                Multiplication (a * b): ${multiplication}<br>
+                Division (a / b): ${division.toFixed(3)}<br>
+                Remainder/Modulo (a % b): ${remainder}<br>
+                Exponentiation (a ** b): ${exponentiation}<br><br>
+                <em>% gives remainder, ** is exponentiation (ES2016)</em>
+            `;
+            
+            document.getElementById('operators-output').innerHTML= output;
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="js-demo">
+        <h3></h3>
+        <p></p>
+        <button class="demo-button" onclick="showBasicComparisons()">Basic comparison</button>
+        <button class="demo-button" onclick="showEqualityOperators()">== vs ===</button>
+        <button class="demo-button" onclick="showTypeCoercion">Type coercion</button>
+
+        <div id="comparison-output" class="output">click a button to explore comparisms</div>
+    </div>
+
+    <script>
+        function showBasicComparisons() {
+            let a = 10;
+            let b = 5;
+            let c = 10;  
+            
+            let output = `
+                a= ${a}, b= ${b}, c =${c}<br><br>
+            
+            `
+         }
+    </script>
+</body>
+</html>
