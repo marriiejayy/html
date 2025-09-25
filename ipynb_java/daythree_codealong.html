@@ -123,23 +123,23 @@
         countdown.reverse();
         console.log("reversed countdown:", countdown);
 
-        
+
         console.log("");
 
         // Basic for loop structure:
         // for (initialization; condition; increment) {
         //     code to repeat
-        
+
         // simple counting loop
         console.log("Counting from one to five");
         for (let i = 1; i <= 5; i++) {
-              console.log("count:", i)
+            console.log("count:", i)
         }
 
         console.log("");
 
         //counting backwards
-        
+
         console.log("counting from five to one");
         for (let i = 5; i >= 1; i--) {
             console.log("countdown:", i);
@@ -147,42 +147,75 @@
 
         console.log("Blast off!");
 
-        
+
         console.log("");
 
         // using loops with calculation 
-        
+
         console.log("mutiplication table for 3");
         for (let i = 1; i <= 10; i++) {
-            let result = 3 * i;   
+            let result = 3 * i;
             console.log(`3 x ${i} = ${result}`);
         }
 
         console.log("");
 
         //loop with different step sizes
-        
+
         console.log("Even numbers from two to ten");
-        for (let i = 2; i <= 10; i+=2) {
-            
-        console.log("Even number:", i);
+        for (let i = 2; i <= 10; i += 2) {
+
+            console.log("Even number:", i);
         }
-  
+
         console.log("");
 
         //loop through an array using index
         let colorss = ["red", "green", "blue", "yellow"];
         console.log("Colors:", colorss);
-        for (let i=0; i < colorss.length; i++) {    
-        console.log(`Color ${i + 1}: ${colorss[i]}`);
+        for (let i = 0; i < colorss.length; i++) {
+            console.log(`Color ${i + 1}: ${colorss[i]}`);
         }
 
         //for .. of loop - easier way to go through array items
-        let fruitss = ["apple", "banana", "orange", "grape"];
+        let fruitss = ["apple", "banana", "cashew", "kiwi"]
         for (let x of fruitss) {
-            
-        console.log("I like", x);
+            console.log("i like", x);
         }
+
+        // processing numbers with for .. of
+        // let numbersss = [25, 83, 71, 85, 67];
+        // let total = 0;
+        // console.log("Calculating average score:");
+        // for (let x of numbersss) {
+        //     console.log("adding scores:", numbersss);
+        //     total += numbersss;
+        // }
+
+        // let average = total / numbersss.length;
+        // console.log(`Total: ${total}, Average: ${average.toFixed[1]}`);
+
+        // using loops with conditions
+        let temperatures = [68, 72, 85, 90, 75, 82, 88];
+        let hotDays = 0;
+        let coldDays = 0;
+
+        console.log("Analyzing temperatures:");
+        for (let temp of temperatures) {
+            if (temp >= 85) {
+                hotDays++;
+                console.log(`${temp}∘F- Hot day!`);
+            } else if (temp < 70) {
+                coldDays++;
+                console.log(`${temp}∘F- Cold day!`);
+            } else {
+                console.log(`${temp}∘F- Nice day!`);
+            }
+        }
+
+        console.log(`Summary: ${hotDays} hot days, ${coldDays} cold days`);
+
+        
     </script>
 </body>
 
